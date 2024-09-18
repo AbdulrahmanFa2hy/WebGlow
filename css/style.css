@@ -145,10 +145,7 @@ button {
 .header .container {
   display: flex;
   align-items: center;
-}
-.header .container ul {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .logo {
@@ -164,6 +161,7 @@ button {
   width: 60%;
   list-style: none;
   text-align: right;
+  margin: auto;
 }
 
 .nav > li {
@@ -176,7 +174,6 @@ button {
   display: block;
   padding: 10px;
   color: #fff;
-  font-size: 14px;
 }
 
 .nav > li > a.active::after,
@@ -199,38 +196,9 @@ button {
 .nav > li a:hover::after {
   width: 100%;
 }
-.drowpdown-menu {
-  position: absolute;
-  width: 150px;
-  background-color: #1695ff;
-  color: #fff;
-  text-align: center;
-  left: 78%;
-  top: 80%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s;
-}
-
-.drowpdown-menu li {
-  list-style: none;
-}
-
-.drowpdown-menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-}
-
-.drowpdown:hover .drowpdown-menu {
-  opacity: 1;
-  visibility: visible;
-}
-
 /* Home Section */
 .home {
-  min-height: 90vh;
+  min-height: 100vh;
   height: 100%;
   background-image: url("../images/background/background1.webp");
   background-size: cover;
@@ -259,6 +227,12 @@ button {
   line-height: 1.5;
 }
 
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 .btn {
   width: 160px;
   padding: 15px 0;
@@ -269,7 +243,6 @@ button {
 }
 
 .home .btn-start {
-  margin-right: 10px;
   background-color: #fff;
 }
 
@@ -923,13 +896,6 @@ button {
 }
 
 @media screen and (max-width: 1000px) {
-  .header .container {
-    flex-direction: column;
-  }
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
   .logo img {
     width: 80px;
   }
@@ -947,6 +913,9 @@ button {
   .blog-item {
     width: 80%;
     margin: auto;
+  }
+  .nav {
+    width: 80%;
   }
 }
 
@@ -988,8 +957,34 @@ button {
   .testimonial-desc {
     font-size: 14px !important;
   }
+  .nav li a {
+    font-size: 12px;
+    padding: 10px;
+  }
 }
 @media screen and (max-width: 700px) {
+  .home-content {
+    width: 80%;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .home-desc {
+    margin: 10px 0 15px;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 140px;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+
   .portfolio-content {
     grid-template-columns: repeat(1, 1fr);
     margin: auto;
@@ -1022,6 +1017,44 @@ button {
   }
 }
 @media screen and (max-width: 500px) {
+  .header .container {
+    flex-direction: column;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+  .nav {
+    text-align: center;
+    width: 100%;
+  }
+  .nav li a {
+    padding: 5px;
+  }
+  .home-content {
+    width: 85%;
+  }
+
+  .home-title {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .home-desc {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .home .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn {
+    width: 145px;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
   .testimonial {
     height: 600px;
   }
@@ -1052,5 +1085,21 @@ button {
   }
   .service-item .service-item-ul li {
     font-size: 14px;
+  }
+  .portfolio-item {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+  }
+  .pricing-item {
+    width: 100%;
+    padding: 10px;
+  }
+  .blog-item {
+    width: 100%;
+    min-width: 100%;
+  }
+  .pd-y {
+    padding: 90px 0;
   }
 }
